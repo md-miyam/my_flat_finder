@@ -6,6 +6,7 @@ class AppColor {
   static const Color appBarColor = Colors.white;
   static const Color primaryColor = Color(0xFFff6d17);
   static const Color secondaryColor = Color(0xFF188f71);
+  static const Color borderColor = Color(0xFFe1e3e6);
   static const Color myWhite = Colors.white;
   static const Color myBlack = Colors.black;
   static const Color myOrange = Color(0xFFff6d17);

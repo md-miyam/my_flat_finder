@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:my_flat_finder/modules/common_widgets/custom_text.dart';
 import 'package:my_flat_finder/modules/home/widgets/top_localities_list_view.dart';
 import '../../common_widgets/show_more_button.dart';
+import 'easy_ways_list_view.dart';
 import 'explore_services_list_view.dart';
 import 'featured_projects_list_view.dart';
+import 'featured_property_agents_list_view.dart';
 import 'find_property_grid_view.dart';
+import 'latest_properties_sale_list_view.dart';
 
 class PropertyRoundedContainer extends StatefulWidget {
   const PropertyRoundedContainer({super.key});
@@ -51,6 +53,18 @@ class _PropertyRoundedContainerState extends State<PropertyRoundedContainer> {
 
             //FeaturedProjectsListView
             FeaturedProjectsListView(),
+
+            //FeaturedPropertyAgentsListView
+            FeaturedPropertyAgentsListView(),
+
+            //EasyWaysListView
+            EasyWaysListView(),
+
+            // LatestPropertiesListView
+            LatestPropertiesSaleListView(),
+
+
+
 
 
 

@@ -58,37 +58,78 @@ class FeaturedProjectsListView extends StatelessWidget {
             physics: NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               final item = listData[index];
-              return Padding(
-                padding: const EdgeInsets.only(bottom: 20),
-                child: Row(
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(16),
-                      child: Image.asset(
-                        'assets/images/mansarovar_park.png',
-                        height: 130,
-                        width: 130,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              return Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    child: Row(
                       children: [
-                        CustomText(text: 'Mansarovar park Ii'),
-                        CustomText(text: 'lal kuan, ghaziabad',color: AppColor.secondaryTextColor,fontSize: 14,overflow: TextOverflow.ellipsis,),
-                        CustomText(text: 'residential plots'),
-                        CustomText(text: 'property vision promoters...',color: AppColor.secondaryTextColor,fontSize: 14,overflow: TextOverflow.ellipsis,),
-                        CustomText(text: '₹25.50 lac -32 lac'),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: Image.asset(
+                            'assets/images/mansarovar_park.png',
+                            height: 130,
+                            width: 130,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 12),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      CustomText(text: 'Mansarovar park Ii'),
+                                      CustomText(
+                                        text: 'lal kuan, ghaziabad',
+                                        color: AppColor.secondaryTextColor,
+                                        fontSize: 14,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ],
+                                  ),
+
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      CustomText(text: 'residential plots'),
+                                      CustomText(
+                                        text: 'property vision promoters...',
+                                        color: AppColor.secondaryTextColor,
+                                        fontSize: 14,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+
+                              CustomText(text: '₹25.50 lac -32 lac'),
+                            ],
+                          ),
+                        ),
                       ],
-                    )
-                  ],
-                ),
+                    ),
+                  ),
+                  Container(
+                    height: 1,
+                    width: double.infinity,
+                    color: AppColor.borderColor,
+                  ),
+                ],
               );
             },
           ),
 
-          SizedBox(height: 8),
+          SizedBox(height: 22),
           ShowMoreButton(onTap: () {}),
         ],
       ),
