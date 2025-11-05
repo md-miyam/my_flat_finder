@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../until/app_colors.dart';
+import '../../until/app_colors.dart';
 
 class CustomRichText extends StatelessWidget {
   final String firstText;

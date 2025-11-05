@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_flat_finder/until/app_colors.dart';
 
 class MyDropDown extends StatefulWidget {
   const MyDropDown({super.key});
@@ -8,17 +9,17 @@ class MyDropDown extends StatefulWidget {
 }
 
 class _MyDropDownState extends State<MyDropDown> {
-  List<String> items = ['All India', 'Banana', 'Mango'];
-  String selectedValue = 'Apple';
+  List<String> items = ['All India', 'New Delhi', 'Mumbai','Gurgaon','Noida'];
+  String selectedValue = 'All India';
 
   @override
   Widget build(BuildContext context) {
     return DropdownButton<String>(
       underline: SizedBox(),
       value: selectedValue,
-      style: TextStyle(color: Colors.deepOrange, fontWeight: FontWeight.w600),
-      iconEnabledColor: Colors.deepOrange,
-      // icon: Icon(Icons.keyboard_arrow_down, color: Colors.orangeAccent),
+      style: TextStyle(color: AppColor.myOrange,fontSize: 12, fontWeight: FontWeight.w600),
+      iconEnabledColor: AppColor.myOrange,
+      icon: Icon(Icons.keyboard_arrow_down_rounded,color: AppColor.myOrange,),
       items: items.map((String item) {
         return DropdownMenuItem<String>(
           value: item,

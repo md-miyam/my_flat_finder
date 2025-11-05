@@ -19,7 +19,7 @@ class CategoryContainer extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext contexSt) {
+  Widget build(BuildContext _) {
     return InkWell(
       onTap: onTap,
       child: Container(

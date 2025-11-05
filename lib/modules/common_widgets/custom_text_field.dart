@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:my_flat_finder/until/icon_path.dart';
-import '../../../until/app_colors.dart';
+import '../../until/app_colors.dart';
+import '../home/widgets/my_drop_down.dart';
 
 class CustomTextField extends StatelessWidget {
-
   final String hintText;
-  const CustomTextField({
-    super.key, required this.hintText,
-  });
+
+  const CustomTextField({super.key, required this.hintText});
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +23,7 @@ class CustomTextField extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(
-              IconPath.searchIcon,
-              height: 20,
-            ),
+            Image.asset(IconPath.searchIcon, height: 20),
             SizedBox(width: 12),
             Expanded(
               child: TextField(
@@ -45,8 +41,10 @@ class CustomTextField extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(width: 8),
 
-            // SizedBox(width: 120,child: MyDropDown())
+            // SizedBox(width: 120,child: ),
+            MyDropDown(),
           ],
         ),
       ),
