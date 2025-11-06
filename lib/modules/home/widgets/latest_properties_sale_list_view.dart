@@ -36,7 +36,7 @@ class LatestPropertiesSaleListView extends StatelessWidget {
             ),
 
             SizedBox(
-              height: 251,
+              height: 281,
               child: ListView.builder(
                 itemCount: listData.length,
                 shrinkWrap: true,
@@ -45,7 +45,7 @@ class LatestPropertiesSaleListView extends StatelessWidget {
                   return Padding(
                     padding: const EdgeInsets.only(right: 16),
                     child: Container(
-                      width: 192,
+                      width: 180,
                       decoration: BoxDecoration(
                         color: AppColor.secondaryBackgroundColor,
                         borderRadius: BorderRadius.circular(16),
@@ -60,7 +60,7 @@ class LatestPropertiesSaleListView extends StatelessWidget {
                                 left: 16,
                                 right: 16,
                               ),
-                              // height: 191,
+                              height: 120,
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.transparent,
@@ -84,25 +84,42 @@ class LatestPropertiesSaleListView extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'Shahberi',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  ),
+
+                                CustomText(text: '₹37 Lac',fontWeight: FontWeight.bold,),
+                                SizedBox(
+                                  height: 12,
                                 ),
-                                Text(
-                                  listData[index]['city']!,
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color(0xFF6A7380),
-                                  ),
+                                CustomText(text: 'Flats & Apartments',fontSize: 14,),
+                                CustomText(text: '2 BHK / 800 SQ.FT.',fontSize: 12,color: AppColor.secondaryTextColor,),
+                                SizedBox(
+                                  height: 4,
                                 ),
+                                RichText(text: TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: 'By ',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: AppColor.secondaryTextColor,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: 'Mukulananda Panja',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: AppColor.primaryTextColor,
+                                      ),
+                                    ),
+
+                                  ]
+                                )),
+                                CustomText(text: 'Dhakuria (Kolkata)',fontSize: 12,color: AppColor.secondaryTextColor,),
+
                               ],
                             ),
                           ),
+
+
                         ],
                       ),
                     ),
